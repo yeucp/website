@@ -21,8 +21,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t myusername/website:${{ github.sha }} .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/website:${{ github.sha }} .
 
       - name: Push Docker image
         run: |
-          docker push myusername/website:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/website:${{ github.sha }}
