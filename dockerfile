@@ -5,4 +5,4 @@ FROM nginx:alpine
 COPY index.html /usr/share/nginx/html/index.html
 
 # Exponer el puerto en el que Nginx sirve la página
-EXPOSE 81
+EXPOSE 80
